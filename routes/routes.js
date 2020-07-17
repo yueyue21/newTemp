@@ -6,6 +6,9 @@ const router = express.Router();
 
 //When the user sends a post request to this route, passport authenticates the user based on the
 //middleware created previously
+router.get("/",(req,res)=>{
+  res.send("hello world");
+})
 router.post(
   "/signup",
   passport.authenticate("signup", { session: false }),
